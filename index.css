@@ -1,0 +1,59 @@
+header{position: sticky;top: 16px;transform: translateY(-30px) scale(1);opacity: 0; transition: all ease-out 600ms;}
+.headerAfterScale{
+    transform: scale(1.05) !important;
+}
+.HeaderContainer img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 15%;
+
+}
+.HeaderContainer{
+    padding: 15px;
+    position: relative;
+}
+.HeaderContainer::after{
+    position: absolute;
+    left: 10%;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 100px rgba(99, 99, 99, 0.315);
+    outline-offset: 10px;
+    outline: 2px solid cyan;
+    transition: all ease-out 500ms;
+    transform: skew(0deg);
+}
+.HeaderContainer::before{
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 0px;
+    z-index: -1;
+    width: 80%;
+    height: 100%;
+    transition: transform ease-out 500ms;
+    transform: skew(0deg);
+    border: 2px solid cyan;
+}
+.offSetZeroClass::after{
+    outline-offset: 0px;
+}
+.offSetZeroClassDNone::after{
+    outline: none;
+}
+.afterClass::after{
+    transform: skew(30deg);
+}
+.beforeClass::before{
+    transform: skew(30deg);
+}
+.beforeClass2::before{
+    transition: all ease-out 500ms;
+    top: 17px;
+    left: 8%;
+}
